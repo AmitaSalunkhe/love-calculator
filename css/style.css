@@ -1,0 +1,30 @@
+.img1
+{
+  transform: rotate(-10deg);
+  /* border-radius: 50%; */
+  margin-top: -30px;
+  margin-left: 20px;
+}
+
+.bg
+{
+  /* background-image: url("./assets/gg.gif"); */
+  background-image: url("./assets/bg.jpg");
+background-repeat: no-repeat;
+  height: 300px;
+  
+
+  width: 300px;
+}
+.h3nav
+{
+    color: white; 
+    text-align: center; 
+    font-size: 60px; 
+    margin-top: -80px;
+     padding-bottom: 30px;
+}
+html
+{
+  scroll-behavior: smooth;
+}
