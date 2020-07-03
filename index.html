@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title> first</title>
+        <title> Love Calculator</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -32,10 +32,10 @@
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="./assets/1.jpeg" class="d-block w-100" alt="..." height="500px">
+                <img src="./assets/5.jpeg" class="d-block w-100" alt="..." height="500px">
               </div>
               <div class="carousel-item">
-                <img src="./assets/5.jpeg" class="d-block w-100" alt="..." height="500px">
+                <img src="./assets/1.jpeg" class="d-block w-100" alt="..." height="500px">
               </div>
               <div class="carousel-item">
                 <img src="./assets/3.jpeg" class="d-block w-100" alt="..." height="500px">
@@ -71,10 +71,10 @@
 
 
 
-<div  style="background-image: url('./assets/gg.gif'); background-size: cover;" >
+<div  style="background-image: url('./assets/gg.gif'); background-size: cover; " >
   
-      <legend style="text-align:center; font-size: 65px; font-family:Brush Script MT; color:yellow;" >Love Calculator</legend>
-   
+      <legend style="text-align:center; font-size: 65px; font-family:Brush Script MT; color:yellow; " >Love Calculator</legend>
+     
     
 <div  class="row" style="margin-left: 300px;">
     
@@ -82,7 +82,7 @@
      <b>  <i style="color:white ; font-size: 30px; font-family: Verdana, Geneva, Tahoma, sans-serif;"  > Enter Your Name:</i></b> <br><br>
     </div>
     <div class="col-2" style="margin-top: 40px;">
-        <input type="text"  style="width: 250px;"><br><br>
+        <input type="text"  style="width: 250px;" id="name"><br><br>
     </div>
 </div>
 <div class="row" style="margin-left: 300px;">
@@ -90,43 +90,51 @@
        <b> <i style="color:white; font-size: 30px; font-family: Verdana, Geneva, Tahoma, sans-serif;"> Enter Your Partner Name:</i></b> <br><br>
     </div>
     <div class="col-2">
-        <input type="text"  style="width: 250px;"><br><br>
+        <input type="text"  id="partnername" style="width: 250px;" ><br><br>
     </div>
     </div>
-    <div class="row" style="margin-left: 400px;">
+    <div class="row" style="margin-left: 300px;">
         <div class="col-2">
           
-    <button type="button" onclick="calculate()" class="btn btn-primary btn-lg" style="margin-left: 30px;">Calculate</button><br><br><br><br><br><br>
+    <button type="submit" onclick="calculate()" class="btn btn-primary btn-lg" style="margin-left: 30px;">Calculate</button><br><br><br>
         </div>
-    <div class="col-6" >
-    <h3 class="neww"> </h3>
     </div>
+    <div class="row"  style="margin-left: 300px;">
+      <div class="col-12" >
+        <h3 class="neww" style="color: rgb(119, 0, 255); font-size: 40px;"> </h3>
+      
+    </div>
+  
     </div>
 
-
-
-
-
-   
 
 
 <script>
     function calculate()
     {
+      var name1 = document.getElementById("name").value
+  var partnername1 = document.getElementById("partnername").value
         var a=Math.ceil(Math.random()*100);
+        if(name1== "" || partnername1=="")
+  {
+    alert("Please Enter the value");
+   
+  }
+  else
+  {
         if(a<50)
         {
-           document.getElementsByClassName("neww")[0].innerHTML="Your score is:" +a+ "   Find Another Partner";
+           document.getElementsByClassName("neww")[0].innerHTML="Your score is :" +a+ "   Find Another Partner";
         }
         else if(a>50 && a<75)
         {
-            document.getElementsByClassName("neww")[0].innerHTML="Your score is:" +a+ "  Normal couple  ";
+            document.getElementsByClassName("neww")[0].innerHTML="Your score is :" +a+ "  Normal couple  ";
         }
         else{
-            document.getElementsByClassName("neww")[0].innerHTML="Your score is:" +a+ "    Romantic couple";
+            document.getElementsByClassName("neww")[0].innerHTML="Your score is :" +a+ "    Romantic couple";
         }
     }
-
+  }
 </script>
 </div>
 </div>
